@@ -1,9 +1,15 @@
 
-public class Nutricionista {
+public class Nutricionista extends Escola {
+	
+	/*
+	 Para cada 1g de carboidratos, multiplicar por 4 calorias;
+	 Para cada 1g de proteína, multiplicar por 4 calorias;
+     Para cada 1g de gordura, multiplicar por 9 calorias. 
+	 */
 	private String nome;
 	
 	public Nutricionista() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public void setNome(String nome) {

@@ -1,9 +1,18 @@
+import java.util.ArrayList;
+
 public class Escola extends Aluno{
     private int totAlunos;
     private String nomeEscola;
+    private ArrayList<String> despensa = new ArrayList<String>();
 
     public Escola(){
-        
+       this.despensa = despensa;
+       this.totAlunos = totAlunos;
+       this.nomeEscola = nomeEscola;
+    }
+    
+    public void alimentosDisponiveis(){
+    	 
     }
 
 
