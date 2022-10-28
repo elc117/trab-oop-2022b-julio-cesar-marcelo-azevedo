@@ -6,10 +6,10 @@ public class Aluno{
     private boolean dietaRestrita;
 
 public Aluno(){
-    this.nomeAluno = "João";
+    this.nomeAluno = "Joao";
     this.idade = 12;
     this.peso = 45;
-    this.altura = 1.57;
+    this.altura = 1.57f;
     this.dietaRestrita = false;
 }
 
@@ -18,7 +18,7 @@ public Aluno(String nomeAluno, int idade, float peso, float altura, boolean diet
     this.idade = idade;
     this.peso = peso;
     this. altura = altura;
-    this.dietaRestrita = dietaRestrita
+    this.dietaRestrita = dietaRestrita;
 }
 
 public void setNome(String nomeAluno){
@@ -49,7 +49,7 @@ public void setIdade(int idade){
     this.idade = idade;
 }
 
-public String getIdade(){
+public int getIdade(){
     return this.idade;
 }
 
