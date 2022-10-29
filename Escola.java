@@ -11,8 +11,20 @@ public class Escola extends Aluno{
        this.nomeEscola = nomeEscola;
     }
     
-    public void alimentosDisponiveis(){
-    	 
+    public void setDespensa(ArrayList<String> despensa){
+		
+		despensa.add("Arroz integral");
+        despensa.add("Feijao preto");
+        despensa.add("Batata");
+        despensa.add("Carne vermelha");
+        despensa.add("Carne branca");
+        despensa.add("Tomate");
+        despensa.add("Beterraba");
+        
+    }
+    
+    public ArrayList<String> getDespensa(){
+    	return despensa;
     }
 
 
@@ -27,4 +39,9 @@ public class Escola extends Aluno{
     public void setNomeEscola(String nomeEscola){
         this.nomeEscola = nomeEscola;
     }
+    
+    public String getNomeEscola() {
+    	return nomeEscola;
+    }
+    
 }
