@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class Nutricionista extends Escola {
+public class Nutricionista{
 	
 	/*
 	 Para cada 1g de carboidratos, multiplicar por 4 calorias;
@@ -10,7 +10,7 @@ public class Nutricionista extends Escola {
 	private ArrayList<Escola> DietaGeral  = new ArrayList<Escola>();
 	private ArrayList<Escola> DietaEspecial = new ArrayList<Escola>();
 	
-	public Nutricionista() {
+	public Nutricionista(String nome) {
 		this.nome = "Ana";
 	}
 	
