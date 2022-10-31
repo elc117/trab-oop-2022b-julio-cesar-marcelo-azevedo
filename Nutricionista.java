@@ -23,7 +23,7 @@ public class Nutricionista extends Aluno{
 	}
 	
 	
-	public void criaDieta(int totAlunos) {
+	public void criaDietaGeral(int totAlunos) {
 		Aluno al = new Aluno();
 		// BEE : Gasto energetico basal
 	
@@ -34,13 +34,17 @@ public class Nutricionista extends Aluno{
 		//Crianças e adolescentes com peso normal (Meninas)
 		//BEEMENINAS = 189 – (17,6 x idade [anos]) + (625 x altura [m]) + (7,9 x peso [kg]);
 
+	}
+	
+	public void criaDietaEspecifica(int totAlunos) {
 		//Adolescentes com sobrepeso e obesidade (Homens)
 		//BEE-HOMENS = 419,9 – (35,5 x idade [anos]) + (418,9 x altura [m]) + (16,7 x peso [kg]);
-		
+				
 		//Adolescentes com sobrepeso e obesidade (Mulheres)
 		//BEE-MULHERES = 515,8 – (26,8 x idade [anos]) + (347 x altura [m]) + (12,4 x peso [kg]);
-
 	}
+	
+	
 	
 	public void editaDieta() {
 		
