@@ -11,9 +11,9 @@ public class EscolaTest extends Escola {
 		Escola e1 = new Escola(4);
 		
 		ArrayList<String> despensa = new ArrayList();
-		ArrayList<String> alunoGeral = new ArrayList<String>();
-		ArrayList<String> alunoEspecifico = new ArrayList<String>();
-		ArrayList<String> listaAlunos = new ArrayList<String>();
+		ArrayList<Aluno> alunoGeral = new ArrayList<Aluno>();
+		ArrayList<Aluno> alunoEspecifico = new ArrayList<Aluno>();
+		ArrayList<Aluno> listaAlunos = new ArrayList<Aluno>();
 		
 		System.out.println("Total alunos: " + e1.getTotAlunos());
 		
@@ -30,10 +30,11 @@ public class EscolaTest extends Escola {
         Aluno a3 = new Aluno ("Nicolas", 12, 41.0f, 1.55f, false);
         Aluno a4 = new Aluno ("Natalia", 13, 40.0f, 1.42f, true);
         
-        System.out.println(a1);
+        
+        
                 
         
-        //System.out.println(despensa);
+        System.out.println(despensa);
 	}
 
 }

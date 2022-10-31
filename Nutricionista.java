@@ -9,6 +9,8 @@ public class Nutricionista extends Aluno{
 	private String nome;
 	private ArrayList<Escola> DietaGeral  = new ArrayList<Escola>();
 	private ArrayList<Escola> DietaEspecial = new ArrayList<Escola>();
+	private ArrayList<Aluno> alunosGeral = new ArrayList<Aluno>();
+	private ArrayList<Aluno> alunosEspecificos = new ArrayList<Aluno>();
 	
 	public Nutricionista(String nome) {
 		this.nome = "Ana";
