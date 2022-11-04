@@ -1,16 +1,11 @@
 import java.util.ArrayList;
 
 public class EscolaTest extends Escola {
-
 	
-	public EscolaTest(int totAlunos) {
-		super(totAlunos);
-	}
-
 	public static void main(String[] args) {
-		Escola e1 = new Escola(4);
+		Escola e1 = new Escola();
 		
-		ArrayList<String> despensa = new ArrayList();
+		ArrayList<String> despensa = new ArrayList<>();
 		ArrayList<Aluno> alunoGeral = new ArrayList<Aluno>();
 		ArrayList<Aluno> alunoEspecifico = new ArrayList<Aluno>();
 		ArrayList<Aluno> listaAlunos = new ArrayList<Aluno>();
@@ -25,16 +20,12 @@ public class EscolaTest extends Escola {
         despensa.add("Tomate");
         despensa.add("Beterraba");
         
-        Aluno a1 = new Aluno("Joao", 12, 45.0f, 1.50f, false);
-        Aluno a2 = new Aluno("Paula", 15, 43.0f, 1.450f, true);
-        Aluno a3 = new Aluno ("Nicolas", 12, 41.0f, 1.55f, false);
-        Aluno a4 = new Aluno ("Natalia", 13, 40.0f, 1.42f, true);
         
+        //System.out.println(despensa);
         
-        
-                
-        
-        System.out.println(despensa);
+        for(String item: despensa) {
+        	System.out.println(despensa);
+        }
 	}
 
 }
