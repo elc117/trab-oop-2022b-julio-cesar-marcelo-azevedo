@@ -2,8 +2,13 @@ import java.util.ArrayList;
 
 public class EscolaTest extends Escola {
 	
+	public EscolaTest(String nome) {
+		super(nome);
+		// TODO Auto-generated constructor stub
+	}
+
 	public static void main(String[] args) {
-		Escola e1 = new Escola();
+		Escola e1 = new Escola("Margarida Lopes");
 		
 		ArrayList<String> despensa = new ArrayList<>();
 		ArrayList<Aluno> alunoGeral = new ArrayList<Aluno>();
