@@ -42,10 +42,6 @@ public class Escola extends Aluno{
     }
     
     
-    public void addDespensa(ArrayList<Escola> despensa) {
-    	this.despensa.addAll(despensa);
-    	
-    }
     
     public static void main(String[] args) {
     	Escola e = new Escola("Margarida Lopes");

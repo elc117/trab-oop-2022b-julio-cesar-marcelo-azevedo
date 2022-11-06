@@ -1,19 +1,24 @@
 import java.util.ArrayList;
-public class Nutricionista extends Aluno{
+import java.util.HashMap;
+
+public class Nutricionista{
 	
 	/*
-	 Para cada 1g de carboidratos, multiplicar por 4 calorias;
-	 Para cada 1g de proteína, multiplicar por 4 calorias;
-     Para cada 1g de gordura, multiplicar por 9 calorias. 
+	 * Carboidrato: Arroz branco , feijão, lentilha, macarrão integral;
+	 * Proteína: Carne vermelha, frango
+	 * 
 	 */
 	private String nome;
-	private ArrayList<Escola> DietaGeral  = new ArrayList<Escola>();
-	private ArrayList<Escola> DietaEspecial = new ArrayList<Escola>();
-	private ArrayList<Aluno> alunosGeral = new ArrayList<Aluno>();
-	private ArrayList<Aluno> alunosEspecificos = new ArrayList<Aluno>();
+	private String nomeEscola;
+	private HashMap<String, Float> listaCarbo  = new HashMap<String, Float>();
+	private HashMap<String, Float> listaProt  = new HashMap<String, Float>();
 	
-	public Nutricionista(String nome) {
-		this.nome = "Ana";
+	public Nutricionista() {
+		
+	}
+	public Nutricionista(String nome, String nomeEscola) {
+		this.nome = nome;
+		this.nomeEscola = nomeEscola;
 	}
 	
 	public void setNome(String nome) {
@@ -24,41 +29,37 @@ public class Nutricionista extends Aluno{
 		return this.nome;
 	}
 	
-	
-	public void criaDietaGeral(int totAlunos) {
-		Aluno al = new Aluno();
-		// BEE : Gasto energetico basal
-	
-		//Crianças e adolescentes com peso normal (Meninos)
-		//BEE_MENINOS = 68 – (43,3 x idade [anos]) + (712 x altura [m]) + (19,2 x peso [kg]);
-		double BEE_MENINOS = 68 - (43.3 * al.getIdade() + (712 * al.getAltura() + (19.2 * al.getPeso()))) ;
+	public HashMap<String, Float> setValorEnergeticoCarboidrato() {
+		//"Alimento, Valor energetico (kcal)"
 		
-		//Crianças e adolescentes com peso normal (Meninas)
-		//BEEMENINAS = 189 – (17,6 x idade [anos]) + (625 x altura [m]) + (7,9 x peso [kg]);
-
-	}
-	
-	public void criaDietaEspecifica(int totAlunos) {
-		//Adolescentes com sobrepeso e obesidade (Homens)
-		//BEE-HOMENS = 419,9 – (35,5 x idade [anos]) + (418,9 x altura [m]) + (16,7 x peso [kg]);
-				
-		//Adolescentes com sobrepeso e obesidade (Mulheres)
-		//BEE-MULHERES = 515,8 – (26,8 x idade [anos]) + (347 x altura [m]) + (12,4 x peso [kg]);
-	}
-	
-	
-	
-	public void editaDieta() {
+		HashMap<String, Float> listaCarbo = new HashMap<String, Float>();
+		listaCarbo.put("Arroz branco", 128.3f);
+		listaCarbo.put("Feijao", 164f);
+		listaCarbo.put("Lentilha", 128.3f);
+		listaCarbo.put("Macarrao", 173.80f);
+		return listaCarbo;
 		
 	}
 	
-	public void excluiDieta() {
+	public HashMap<String, Float> getValorEnergeticoCarboidrato(String string){
+		return listaCarbo;
 		
 	}
 	
-	public void enviaDieta() {
+	public void setValorEnergeticoProteina() {
+		//"Alimento, Valor energetico (kcal)"
+		
+		HashMap<String, Float> listaProt = new HashMap<String, Float>();
+		listaProt.put("Frango", 163.0f);
+		listaProt.put("Carne", 144f);
+		listaProt.put("Peixe", 150.0f);
+		listaProt.put("Ovos", 155.0f);
 		
 	}
 	
+	public static void main(String [] args) {
+		
+		
+	}
 }
 
