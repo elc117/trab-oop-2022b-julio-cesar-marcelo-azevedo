@@ -53,4 +53,14 @@ public int getIdade(){
     return this.idade;
 }
 
+public String getContactInfo() {
+    return "{" +
+      "class='Aluno'" +
+      ", nome='" + getNome() + "'" +
+      ", idade='" + getIdade() + "'" +
+      ", peso='" + getPeso() + "'" +
+      ", altura='" + getAltura() + "'" +
+      "}";
+  }
+
 }

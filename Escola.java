@@ -4,13 +4,19 @@ import java.util.Scanner;
 public class Escola extends Aluno{
 	private String nome;
     private int totAlunos;
-    private String tipoAlimento;
     private ArrayList<Escola> despensa;
     private ArrayList<Aluno> alunosGeral;
     private ArrayList<Aluno> alunosEspecificos;
 
+    
+    public Escola() {
+    	
+    }
+    
     public Escola(String nome){
     	this.nome = nome;
+    	this.alunosGeral = new ArrayList<Aluno>();
+    	this.alunosEspecificos = new ArrayList<Aluno>();
     }
     
     
@@ -31,7 +37,26 @@ public class Escola extends Aluno{
     public ArrayList<Escola> getDespensa(){
     	return this.despensa;
     }
+    
+    public void addAlunoGeral(Aluno alunoGeral) {
+    	this.alunosGeral.add(alunoGeral);
+    }
+    
+    public void addAlunoEspecifico(Aluno alunoEspecifico) {
+    	this.alunosGeral.add(alunoEspecifico);
+    }
 
+
+    public ArrayList<String> getAlunos(){
+    	
+    	ArrayList<String> listaAlunos = new ArrayList<String>();
+    	
+    	for(Aluno al: alunosGeral) {
+    		listaAlunos.add(al.getContactInfo());
+    		
+    	}
+		return listaAlunos;
+    }
 
     public void setTotAlunos(int totAlunos){
         this.totAlunos = totAlunos;
