@@ -8,10 +8,9 @@ public class Escola extends Aluno{
     private int totAlunosDieta;
     private String nutricionistaResp;
     
-    public Escola(String nomeEscola, String nutricionistaResp,ArrayList<Aluno> listaAlunos) {
+    public Escola(String nomeEscola, String nutricionistaResp) {
     	this.nomeEscola = nomeEscola;
     	this.setNutricionistaResp(nutricionistaResp);
-    	this.setTotAlunos(listaAlunos);
     	
     }
     

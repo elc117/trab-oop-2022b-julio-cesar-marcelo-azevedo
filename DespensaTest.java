@@ -1,26 +1,19 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class DespensaTest extends Despensa {
 	
-	public DespensaTest(String nomeEscola, String nutricionistaResp, ArrayList<Aluno> listaAlunos) {
-		super(nomeEscola, nutricionistaResp, listaAlunos);
+	public DespensaTest(String nomeEscola, String nutricionistaResp) {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 
 	public static void main(String[] args) {
-	//Despensa d = new Despensa(nomeAlimento, nomeAlimento, null);
-	ArrayList<String> listaAlimentos = new ArrayList<String>();
-	
-	listaAlimentos.add("Arroz integral");
-	listaAlimentos.add("Feijao preto");
-	listaAlimentos.add("Batata");
-	listaAlimentos.add("Carne vermelha");
-	listaAlimentos.add("Carne branca");
-	listaAlimentos.add("Tomate");
-	listaAlimentos.add("Beterraba");
-	
-		//System.out.println(listaAlimentos.getInfoDespensa());
-    
-
+		HashMap<String, Float> alimentos = new HashMap<String, Float>();
+		Escola e = new Escola("Margarida Lopes", "Ana");
+		Despensa d = new Despensa();
+		
+		System.out.println(d.getInfoDespensa());
+		
 	}
 }

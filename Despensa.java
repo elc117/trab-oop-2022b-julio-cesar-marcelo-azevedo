@@ -1,48 +1,30 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
-public class Despensa extends Escola {
+public class Despensa{
 	
-
-	public Despensa(String nomeEscola, String nutricionistaResp, ArrayList<Aluno> listaAlunos) {
-		super(nomeEscola, nutricionistaResp, listaAlunos);
-		// TODO Auto-generated constructor stub
+	public Despensa() {
+		despensa.put("Arroz Branco", 5f);
+		despensa.put("Feijao", 3f);
+		despensa.put("Carne", 10f);
+		
+		
 	}
-
-	private ArrayList<Escola> despensa;
-    private String nomeAlimento;
-    private float qtdAlimento;
+	
+	private HashMap<String, Float> despensa = new HashMap<String, Float>();
     
-    
+	public void setDespensa(HashMap<String, Float> alimentos) {
+	}
    
-	public ArrayList<Escola> getDespensa() {
+	public HashMap<String, Float> getDespensa() {
 		return despensa;
 	}
 
-	public void setDespensa(ArrayList<Escola> despensa) {
-		this.despensa = despensa;
-	}
-
-	public float getQtdAlimento() {
-		return qtdAlimento;
-	}
-
-	public void setQtdAlimento(float qtdAlimento) {
-		this.qtdAlimento = qtdAlimento;
-	}
-
-	public String getNomeAlimento() {
-		return nomeAlimento;
-	}
-
-	public void setNomeAlimento(String nomeAlimento) {
-		this.nomeAlimento = nomeAlimento;
-	}
-	
 	 public String getInfoDespensa() {
 		    return "{" +
 		      "class='Despensa'" +
-		      ", nomeAlimento='" + getNomeAlimento() + "'" +
-		      ", idade='" + getQtdAlimento() + "'";
+		      ", nomeAlimento='" + getDespensa() + "'" +
+		      ",";
 
 		  }
 
