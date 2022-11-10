@@ -2,12 +2,19 @@ import java.util.ArrayList;
 
 public class EscolaTest extends Escola {
 	
+	public EscolaTest(String nomeEscola, String nutricionistaResp, ArrayList<Aluno> listaAlunos) {
+		super(nomeEscola, nutricionistaResp, listaAlunos);
+		// TODO Auto-generated constructor stub
+	}
+
 	public static void main(String[] args) {
-		Escola e1 = new Escola("Margarida Lopes");
+		ArrayList<Aluno> listaAlunos = new ArrayList<Aluno>();
+		
+		Escola e1 = new Escola("Margarida Lopes", "Ana Vitoria", listaAlunos);
 		Aluno a1 = new Aluno();
 		Aluno a2 = new Aluno("Pedro", 14, 37f, 1.45f, true);
 		
-		ArrayList<Aluno> listaAlunos = new ArrayList<Aluno>();
+		
 		
 		listaAlunos.add(a1);
 		listaAlunos.add(a2);
@@ -26,5 +33,11 @@ public class EscolaTest extends Escola {
 			}
 		
 		}
+		System.out.println("-------------------------------------------------------------");
+
+		System.out.println("Total alunos dieta");
+		
+		
+		
 	}
 }

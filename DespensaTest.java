@@ -2,8 +2,13 @@ import java.util.ArrayList;
 
 public class DespensaTest extends Despensa {
 	
+	public DespensaTest(String nomeEscola, String nutricionistaResp, ArrayList<Aluno> listaAlunos) {
+		super(nomeEscola, nutricionistaResp, listaAlunos);
+		// TODO Auto-generated constructor stub
+	}
+
 	public static void main(String[] args) {
-	Despensa d = new Despensa();
+	//Despensa d = new Despensa(nomeAlimento, nomeAlimento, null);
 	ArrayList<String> listaAlimentos = new ArrayList<String>();
 	
 	listaAlimentos.add("Arroz integral");
@@ -14,7 +19,7 @@ public class DespensaTest extends Despensa {
 	listaAlimentos.add("Tomate");
 	listaAlimentos.add("Beterraba");
 	
-	System.out.println(d.getInfoDespensa());
+	//System.out.println(d.getInfoDespensa());
     
 
 	}

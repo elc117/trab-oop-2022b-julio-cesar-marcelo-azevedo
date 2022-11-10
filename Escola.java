@@ -2,52 +2,68 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Escola extends Aluno{
-	private String nome;
+	private String nomeEscola;
+    private int totAlunos;
     private int totAlunosGeral;
     private int totAlunosDieta;
-    private ArrayList<Aluno> listaAlunos;
-
-    public Escola() {
+    private String nutricionistaResp;
+    
+    public Escola(String nomeEscola, String nutricionistaResp,ArrayList<Aluno> listaAlunos) {
+    	this.nomeEscola = nomeEscola;
+    	this.setNutricionistaResp(nutricionistaResp);
+    	this.setTotAlunos(listaAlunos);
     	
     }
     
-    public Escola(String nome){
-    	this.nome = nome;
+    public Escola(ArrayList<Aluno> listaAlunos){
+    	this.setTotAlunos(listaAlunos);
     	
     }
     
-    
-    public void setNome(String nome) {
-    	this.nome = nome;
+    public void setNomeEscola(String nomeEscola) {
+    	this.nomeEscola = nomeEscola;
     }
     
-    public String getNome() {
-    	return this.nome;
+    public String getNomeEscola() {
+    	return this.nomeEscola;
+    }
+    
+    public void setTotAlunos(ArrayList<Aluno> listaAlunos) {
+    	
+    }
+    
+    public int getTotAlunos() {
+    	
+    	return this.totAlunos;
+    }
+    
+    public void setTotAlunosGeral(ArrayList<Aluno> listaAlunos) {
+    	
+    }
+    
+    public int getTotAlunosGeral() {
+    	return this.totAlunosGeral;
+    }
+    
+    public void setTotAlunosDieta(Aluno al ,ArrayList<Aluno> listaAlunos) {
+    	
+    	for(int i=0; i<=listaAlunos.size(); i++) {
+    		if(al.getDietaRestritiva() == true) {
+    			this.totAlunosDieta ++;
+    		}
+    	}
+    }
+    
+    public int getTotAlunosDieta() {
+    	return this.totAlunosDieta;
     }
 
-
-	public int getTotAlunosGeral() {
-		return totAlunosGeral;
+	public String getNutricionistaResp() {
+		return nutricionistaResp;
 	}
 
-	public void setTotAlunosGeral(int totAlunosGeral) {
-		this.totAlunosGeral = totAlunosGeral;
+	public void setNutricionistaResp(String nutricionistaResp) {
+		this.nutricionistaResp = nutricionistaResp;
 	}
-
-	public ArrayList<Aluno> getListaAlunos() {
-		return listaAlunos;
-	}
-
-	public void setListaAlunos(ArrayList<Aluno> listaAlunos) {
-		this.listaAlunos = listaAlunos;
-	}
-
-	public int getTotAlunosDieta() {
-		return totAlunosDieta;
-	}
-
-	public void setTotAlunosDieta(int totAlunosDieta) {
-		this.totAlunosDieta = totAlunosDieta;
-	}
-
+    
 }
