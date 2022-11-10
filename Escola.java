@@ -3,20 +3,17 @@ import java.util.Scanner;
 
 public class Escola extends Aluno{
 	private String nome;
-    private int totAlunos;
-    private ArrayList<Escola> despensa;
-    private ArrayList<Aluno> alunosGeral;
-    private ArrayList<Aluno> alunosEspecificos;
+    private int totAlunosGeral;
+    private int totAlunosDieta;
+    private ArrayList<Aluno> listaAlunos;
 
-    
     public Escola() {
     	
     }
     
     public Escola(String nome){
     	this.nome = nome;
-    	this.alunosGeral = new ArrayList<Aluno>();
-    	this.alunosEspecificos = new ArrayList<Aluno>();
+    	
     }
     
     
@@ -27,90 +24,30 @@ public class Escola extends Aluno{
     public String getNome() {
     	return this.nome;
     }
-    
-    public void setDespensa(ArrayList<Escola> despensa){
-		
-		this.despensa = despensa;
-        
-    }
-    
-    public ArrayList<Escola> getDespensa(){
-    	return this.despensa;
-    }
-    
-    public void addAlunoGeral(Aluno alunoGeral) {
-    	this.alunosGeral.add(alunoGeral);
-    }
-    
-    public void addAlunoEspecifico(Aluno alunoEspecifico) {
-    	this.alunosGeral.add(alunoEspecifico);
-    }
 
 
-    public ArrayList<String> getAlunos(){
-    	
-    	ArrayList<String> listaAlunos = new ArrayList<String>();
-    	
-    	for(Aluno al: alunosGeral) {
-    		listaAlunos.add(al.getContactInfo());
-    		
-    	}
+	public int getTotAlunosGeral() {
+		return totAlunosGeral;
+	}
+
+	public void setTotAlunosGeral(int totAlunosGeral) {
+		this.totAlunosGeral = totAlunosGeral;
+	}
+
+	public ArrayList<Aluno> getListaAlunos() {
 		return listaAlunos;
-    }
+	}
 
-    public void setTotAlunos(int totAlunos){
-        this.totAlunos = totAlunos;
-    }
+	public void setListaAlunos(ArrayList<Aluno> listaAlunos) {
+		this.listaAlunos = listaAlunos;
+	}
 
-    public int getTotAlunos(){
-        return this.totAlunos;
-    }
-    
-    
-    
-    public static void main(String[] args) {
-    	Escola e = new Escola("Margarida Lopes");
-    	
-    	ArrayList<Aluno> alunosGeral = new ArrayList<Aluno>();
-    	ArrayList<Aluno> alunosEspecificos = new ArrayList<Aluno>();
-    	
-    	ArrayList<Escola> despensa = new ArrayList<Escola>();
-    
-    	
-    	Aluno a1 = new Aluno("Joao", 12, 45f, 1.45f, false);
-    	Aluno a2 = new Aluno("Nicolas", 13, 41f, 1.41f, false);
-  
-    	Aluno a3 = new Aluno("Paula", 14, 43f, 1.42f, true);
-    	Aluno a4 = new Aluno("Pedro", 11, 40f, 1.47f, true);
-    	        	
-    	alunosGeral.add(a1);
-    	alunosGeral.add(a2);
-    	
-    	alunosEspecificos.add(a3);
-    	alunosEspecificos.add(a4);
-    	
-    	
-    	
-    	System.out.println("Lista alunos gerais: "); 
-    	for (Aluno al : alunosGeral) {
-    		
-    		
-    		System.out.println(al.getNome());
+	public int getTotAlunosDieta() {
+		return totAlunosDieta;
+	}
 
-    	}
-    		System.out.println("----------------------");
-    	
-    	System.out.println("Lista alunos especificos: ");
-    	for (Aluno al : alunosEspecificos) {
-    		
-    		
-    		
-    		System.out.println(al.getNome());
-    		
+	public void setTotAlunosDieta(int totAlunosDieta) {
+		this.totAlunosDieta = totAlunosDieta;
+	}
 
-    	}
-		System.out.println("----------------------");
-
-    	
-    }
 }
