@@ -19,7 +19,7 @@ public class DespensaTest extends Despensa {
 	listaAlimentos.add("Tomate");
 	listaAlimentos.add("Beterraba");
 	
-	//System.out.println(d.getInfoDespensa());
+		//System.out.println(listaAlimentos.getInfoDespensa());
     
 
 	}
