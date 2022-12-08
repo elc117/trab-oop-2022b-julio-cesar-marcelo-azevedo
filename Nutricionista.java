@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.ArrayList;
 public class Nutricionista extends Pessoa{
 	
@@ -8,7 +10,8 @@ public class Nutricionista extends Pessoa{
 		super(nome);
 		this.calculoMetabolico = new ArrayList<Pessoa>();
 	}
-	public double calcularMetabolismoBasal(Pessoa aluno){
+
+	public void calcularMetabolismoBasal(Pessoa aluno){
 		double Kcal=0;
 		//Homens
 		if(aluno.getSexo()=='m') {
@@ -17,11 +20,11 @@ public class Nutricionista extends Pessoa{
 		}
 
 		//Mulheres
-		else{
-			Kcal= 665 + (9.6 * aluno.getPeso()) + (1.8 * (aluno.getAltura() * 100)) - (4.7 * aluno.getIdade());
+		else {
+			Kcal = 665 + (9.6 * aluno.getPeso()) + (1.8 * (aluno.getAltura() * 100)) - (4.7 * aluno.getIdade());
 
 		}
-		return Kcal;
+			aluno.setTxMetabolicaBasal(Kcal);
 	}
 }
 

@@ -1,8 +1,19 @@
+package org.example;
+
 import java.util.ArrayList;
 
 public class Escola{
 	private String nomeEscola;
     private String nutricionistaResp;
+
+	public ArrayList<Pessoa> getAlunos() {
+		return alunos;
+	}
+
+	public void setAlunos(ArrayList<Pessoa> alunos) {
+		this.alunos = alunos;
+	}
+
 	private ArrayList<Pessoa> alunos;
 
     public Escola() {
@@ -32,7 +43,7 @@ public class Escola{
 		this.nutricionistaResp = nutricionistaResp;
 	}
 	
-	public void setAddAluno(Pessoa p) {
+	public void addAluno(Pessoa p) {
 		this.alunos.add(p);	
 	}
 	

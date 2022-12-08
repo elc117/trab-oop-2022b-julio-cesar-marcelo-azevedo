@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.ArrayList;
 
 public class Pessoa{
@@ -6,7 +8,16 @@ public class Pessoa{
     private int idade;
     private float peso;
     private float altura;
-    private String tipoDieta;
+
+    public double getTxMetabolicaBasal() {
+        return txMetabolicaBasal;
+    }
+
+    public void setTxMetabolicaBasal(double txMetabolicaBasal) {
+        this.txMetabolicaBasal = txMetabolicaBasal;
+    }
+
+    private double txMetabolicaBasal;
 
 public Pessoa(String nome){
     this.nome = nome;
@@ -69,17 +80,10 @@ public String getInfoPessoa() {
 
             ", idade='" + getIdade() + "'" +
       ", peso='" + getPeso() + "'" +
-      ", altura='" + getAltura() + "'" + 
-      "}";
+      ", altura='" + getAltura() + "'" +
+            ", taxaMetabolicaBasal='" + getTxMetabolicaBasal() + "'" + "Kcal" +
+            "}";
   }
-
-public void setTipoDieta(String tipo) {
-	this.tipoDieta = tipo;
-}
-public String getTipoDieta() {
-	return tipoDieta;
-}
-
 
 }
 

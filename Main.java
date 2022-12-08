@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -16,17 +18,24 @@ public class Main {
 		
 		Pessoa a4 = new Pessoa("Vitoria",'f' ,13, 47f, 1.60f, false);
 		
-		e.setAddAluno(a1);
-		e.setAddAluno(a2);
-		e.setAddAluno(a3);
-		e.setAddAluno(a4);
+		e.addAluno(a1);
+		e.addAluno(a2);
+		e.addAluno(a3);
+		e.addAluno(a4);
 
-		double x = nut.calcularMetabolismoBasal(a1);
+		nut.calcularMetabolismoBasal(a1);
+		nut.calcularMetabolismoBasal(a2);
+		nut.calcularMetabolismoBasal(a3);
+		nut.calcularMetabolismoBasal(a4);
+
+
+
 
 
 		System.out.println("Escola: " + e.getNomeEscola() + ", "+ "Nutricionista responsavel: " + nut.getNome());
-		//System.out.println("Lista de alunos" + e.getListaAluno());
-		System.out.println("Aluno:" + a1.getNome() + " " + x + "KCal");
+		System.out.println("Lista de alunos" + e.getListaAluno());
+		//System.out.println("Aluno:" + a1.getNome() + " "+ "KCal");
+
 
 
 
