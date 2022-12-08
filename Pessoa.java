@@ -1,22 +1,31 @@
 import java.util.ArrayList;
 
 public class Pessoa{
+    private char sexo;
     private String nome;
     private int idade;
     private float peso;
     private float altura;
     private String tipoDieta;
-    
 
 public Pessoa(String nome){
     this.nome = nome;
 }
 
-public Pessoa(String nome, int idade, float peso, float altura, boolean dietaRestrita){
+    public char getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
+
+    public Pessoa(String nome, char sexo, int idade, float peso, float altura, boolean dietaRestrita){
     this.nome = nome;
     this.idade = idade;
     this.peso = peso;
     this. altura = altura;
+    this.sexo = sexo;
 }
 
 public void setNome(String nome){
@@ -55,8 +64,10 @@ public int getIdade(){
 public String getInfoPessoa() {
     return "{" +
       "class='Pessoa'" +
-      ", nome='" + getNome() + "'" +
-      ", idade='" + getIdade() + "'" +
+      ", nome='" + getNome() + "'" + "," +
+            "Sexo='" + getSexo() + "'" +
+
+            ", idade='" + getIdade() + "'" +
       ", peso='" + getPeso() + "'" +
       ", altura='" + getAltura() + "'" + 
       "}";
