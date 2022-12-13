@@ -19,7 +19,7 @@ public class DespensaCrudRepositorio {
 
     private final static String DATABASE = "Despensa";
     private final static String COLLECTION = "DespensaEscola";
-    private final static String URI =  "mongodb+srv://pccli:<zecarioca>@despensa.z6mawvg.mongodb.net/?retryWrites=true&w=majority";
+    private final static String URI =  "mongodb+srv://pccli:zecarioca@despensa.z6mawvg.mongodb.net/?retryWrites=true&w=majority";
 
     private MongoCollection<Despensa> collection;
 
