@@ -2,8 +2,39 @@ package org.example;
 
 import java.util.ArrayList;
 public class Nutricionista extends Pessoa{
-	
-	private String tipoDieta;
+
+	public int getCalorias() {
+		return calorias;
+	}
+
+	public void setCalorias(int calorias) {
+		this.calorias = calorias;
+	}
+
+	private String nome;
+
+	@Override
+	public String getNome() {
+		return nome;
+	}
+
+	@Override
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	private int calorias;
+
+	@Override
+	public float getPeso() {
+		return peso;
+	}
+
+	public void setPeso(float peso) {
+		this.peso = peso;
+	}
+
+	private float peso;
 
 	public Nutricionista(String nome) {
 		super(nome);

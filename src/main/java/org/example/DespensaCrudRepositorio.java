@@ -41,23 +41,43 @@ public class DespensaCrudRepositorio {
         return result;
     }
 
-    public List<Despensa> readByUrl(String url) {
+    public List<Despensa> readByType(String type) {
         List<Despensa> result = new ArrayList<Despensa>();
-        Document filterByUrl = new Document("url", url);
-        collection.find(filterByUrl).into(result);
+        Document filterByType = new Document("tipo", type);
+        collection.find(filterByType).into(result);
         return result;
     }
 
-    public void updateTagsByUrl(String url, List<String> tags) {
-        Document filterByUrl = new Document("url", url);
-        collection.updateOne(filterByUrl,
-                new Document("$set", new Document("tags", tags)));
+    public List<Despensa> readByName(String name) {
+        List<Despensa> result = new ArrayList<Despensa>();
+        Document filterByName = new Document("nome", name);
+        collection.find(filterByName).into(result);
+        return result;
+    }
+
+    public void updateTagsByType(String type) {
+        Document filterByType = new Document("tipo", type);
+        collection.updateOne(filterByType,
+                new Document("$set", new Document("tipo", type)));
 
     }
 
-    public void deleteByUrl(String url) {
-        Document filterByUrl = new Document("url", url);
-        collection.deleteOne(filterByUrl);
+    public void updateTagsByName(String name) {
+        Document filterByName = new Document("nome", name);
+        collection.updateOne(filterByName,
+                new Document("$set", new Document("nome", name)));
+
+    }
+
+    public void deleteByName(String name) {
+        Document filterByName= new Document("nome", name);
+        collection.deleteOne(filterByName);
+
+    }
+
+    public void deleteByType(String type) {
+        Document filterByType= new Document("tipo", type);
+        collection.deleteOne(filterByType);
 
     }
 
