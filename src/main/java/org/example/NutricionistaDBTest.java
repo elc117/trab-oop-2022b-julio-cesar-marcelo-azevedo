@@ -8,9 +8,8 @@ public class NutricionistaDBTest {
         for (Nutricionista item : nutricionista.readAll()) {
             System.out.println(item.toString());
         }
-
-
-
-        //nutricionista.readByName("feijao preto");
+        
     }
+
+
 }
