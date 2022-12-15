@@ -18,8 +18,8 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
 public class NutricionistaCrudRepositorio {
 
-    private final static String DATABASE = "Despensa";
-    private final static String COLLECTION = "TabelaCalorias";
+    private final static String DATABASE = "Nutricionista";
+    private final static String COLLECTION = "Calorias";
     private final static String URI = "mongodb+srv://pccli:zecarioca@despensa.z6mawvg.mongodb.net/?retryWrites=true&w=majority";
 
     private MongoCollection<Nutricionista> collection;
