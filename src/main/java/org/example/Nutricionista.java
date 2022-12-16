@@ -75,11 +75,45 @@ public class Nutricionista {
 
         //Proteina
         for (Despensa item : despensa.readByType("proteina")) {
-            System.out.println(item.getNome());
+            if (item.getNome() == "carne de frango") {
+                dietaGeral.add("carne de frango");
+            } else if (item.getNome() == "carne de porco") {
+                dietaGeral.add("carne de frango");
+            } else {
+                dietaGeral.add(item.getNome());
+
+            }
+        }
+
+        for (Despensa item : despensa.readByType("carboidrato")) {
+            if (item.getNome() == "batata") {
+                dietaGeral.add("batata");
+            } else if (item.getNome() == "lentilha") {
+                dietaGeral.add("lentilha");
+            } else {
+                dietaGeral.add(item.getNome());
+            }
+        }
+
+        for (Despensa item : despensa.readByType("legume")) {
+            if (item.getNome() == "brocolis") {
+                dietaGeral.add("brocolis");
+            } else if (item.getNome() == "cenoura") {
+                dietaGeral.add("cenoura");
+            } else {
+                dietaGeral.add(item.getNome());
+            }
         }
 
     }
 
+    public ArrayList<String> getDietaGeral() {
+        ArrayList<String> dieta = new ArrayList<String>();
+        for (String a : dietaGeral) {
+            dieta.add(a.toString());
+        }
+        return dieta;
+    }
 
     /*public ArrayList<Nutricionista> getDietaGeral() {
         ArrayList<Nutricionista> dietaGeral = new ArrayList<Nutricionista>();
@@ -98,11 +132,6 @@ public class Nutricionista {
                 " calorias='" + getCalorias() + "'" +
                 "peso=" + getPeso();
     }
-
-    public String getInfoDietaGeral() {
-        return "{" + "alimento: " + getNome();
-    }
-
 
 }
 

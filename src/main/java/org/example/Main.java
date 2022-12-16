@@ -32,10 +32,12 @@ public class Main {
         nut.calcularMetabolismoBasal(a3);
         nut.calcularMetabolismoBasal(a4);
 
+
         System.out.println("Escola: " + e.getNomeEscola() + ", " + "Nutricionista responsavel: " + nut.getNome());
         System.out.println("Lista de alunos" + e.getListaAluno());
 
-        nut.setDietaGeral(dp, nt);
+        //nut.getDietaGeral();
+
     }
 }
 
