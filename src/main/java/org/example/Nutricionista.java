@@ -74,10 +74,8 @@ public class Nutricionista {
     public void setDietaGeral(DespensaCrudRepositorio despensa, NutricionistaCrudRepositorio nutricionista) {
 
         //Proteina
-        for (Despensa item : despensa.readAll()) {
-            if (item.getNome() == "carne de frango") {
-                dietaGeral.add(item.getNome());
-            }
+        for (Despensa item : despensa.readByType("proteina")) {
+            System.out.println(item.getNome());
         }
 
     }

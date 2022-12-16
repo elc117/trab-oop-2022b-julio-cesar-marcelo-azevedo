@@ -6,6 +6,10 @@ public class Main {
 
     public static void main(String[] args) {
 
+        DespensaCrudRepositorio dp = new DespensaCrudRepositorio();
+
+        NutricionistaCrudRepositorio nt = new NutricionistaCrudRepositorio();
+
         Nutricionista nut = new Nutricionista("Ana");
 
         Escola e = new Escola("Coronel Pilar");
@@ -31,7 +35,7 @@ public class Main {
         System.out.println("Escola: " + e.getNomeEscola() + ", " + "Nutricionista responsavel: " + nut.getNome());
         System.out.println("Lista de alunos" + e.getListaAluno());
 
-        System.out.println("Dieta geral: " + nut.getDietaGeral());
+        nut.setDietaGeral(dp, nt);
     }
 }
 
